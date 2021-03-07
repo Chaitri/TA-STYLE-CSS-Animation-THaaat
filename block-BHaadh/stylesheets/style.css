@@ -1,0 +1,212 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+  color: #06005a;
+  margin: 3rem 0;
+}
+
+.col {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.cube {
+  position: relative;
+  width: 100px;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: #e0005e;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+}
+
+.box.top {
+  -webkit-transform: rotate(-45deg) skew(15deg, 15deg);
+          transform: rotate(-45deg) skew(15deg, 15deg);
+}
+
+.box.side-l {
+  background-color: #b9004d;
+  -webkit-transform: rotate(15deg) skew(15deg, 15deg) translate(-50px, 100%);
+          transform: rotate(15deg) skew(15deg, 15deg) translate(-50px, 100%);
+}
+
+.box.side-r {
+  background-color: #cc0055;
+  -webkit-transform: rotate(-15deg) skew(-15deg, -15deg) translate(50px, 100%);
+          transform: rotate(-15deg) skew(-15deg, -15deg) translate(50px, 100%);
+}
+
+.scale-animation:hover {
+  animation: scale 2s linear 0s infinite alternate-reverse;
+}
+
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+}
+
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+.three-d {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.three-d .box {
+  background-color: rgba(224, 0, 94, 0.6);
+  border: 2px solid #460015;
+  height: 200px;
+  width: 200px;
+}
+
+.three-d .top {
+  -webkit-transform: rotateX(90deg) translateZ(100px);
+          transform: rotateX(90deg) translateZ(100px);
+}
+
+.three-d .front {
+  -webkit-transform: translateZ(100px);
+          transform: translateZ(100px);
+}
+
+.three-d .back {
+  -webkit-transform: rotateX(180deg) translateZ(100px);
+          transform: rotateX(180deg) translateZ(100px);
+}
+
+.three-d .left {
+  -webkit-transform: rotateY(-90deg) translateZ(100px);
+          transform: rotateY(-90deg) translateZ(100px);
+}
+
+.three-d .right {
+  -webkit-transform: rotateY(90deg) translateZ(100px);
+          transform: rotateY(90deg) translateZ(100px);
+}
+
+.three-d .bottom {
+  -webkit-transform: rotateX(-90deg) translateZ(100px);
+          transform: rotateX(-90deg) translateZ(100px);
+}
+
+.three-d:hover {
+  -webkit-animation: spin 5s linear 0s infinite;
+          animation: spin 5s linear 0s infinite;
+}
+/*# sourceMappingURL=style.css.map */
